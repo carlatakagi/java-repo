@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 /**
  * IMPORTANT: 
  *      O nome da classe deve ser "Main" para que a sua solução execute
@@ -10,11 +11,8 @@ public class Main {
  
     public static void main(String[] args) throws IOException {
  
-        /**
-         * Escreva a sua solução aqui
-         * Code your solution here
-         * Escriba su solución aquí
-         */
+    DecimalFormat decimalNumber = new DecimalFormat(".0");
+
     double n1, n2, n3, n4, media, notaExame, notaFinalExame;
 
     Scanner reader = new Scanner(System.in);
@@ -22,9 +20,9 @@ public class Main {
     n2 = reader.nextDouble();
     n3 = reader.nextDouble();
     n4 = reader.nextDouble();
-    media = ((n1 * 2) + (n2 * 3) + (n3 * 4) + (n4 * 1)) / 10.0;
+    media = ((n1 * 2.0) + (n2 * 3.0) + (n3 * 4.0) + (n4 * 1.0)) / 10.0;
 
-    System.out.printf("Media: %.1f\n", media);
+    System.out.println("Media: " + decimalNumber.format(media));
     
     if(media >= 7.0) {
       System.out.println("Aluno aprovado.");  
@@ -34,16 +32,16 @@ public class Main {
       System.out.println("Aluno em exame.");
 
       notaExame = reader.nextDouble();
-      notaFinalExame = (media + notaExame)/2;
+      notaFinalExame = (media + notaExame)/2.0;
 
-      System.out.println("Nota do exame: %.1f\n", notaFinalExame);
+      System.out.println("Nota do exame: " + decimalNumber.format(notaExame));
 
       if(notaFinalExame >= 5.0) {
         System.out.println("Aluno aprovado.");
       } else if(notaFinalExame <= 4.9) {
         System.out.println("Aluno reprovado.");
       }
-      System.out.printf("Media final: %.1f\n", notaFinalExame);  
+      System.out.println("Media final: " + decimalNumber.format(notaFinalExame));  
     }
 
   }
