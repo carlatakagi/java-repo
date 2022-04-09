@@ -4,14 +4,16 @@ import java.util.Scanner;
 
 class Exercicio3 {
   public static void main(String[] args) {
-    int number;
+    int num, counter, aux = 0;
 
     Scanner reader = new Scanner(System.in);
-    number = reader.nextInt();
 
-    for(int counter = 0; counter < 10; counter++) {
-      if(number < 0) {
-
+    for (counter = 0; counter < 10; counter++) {
+      num = reader.nextInt();
+      if (num < 0) {
+        aux = aux + 1;
+        System.out.println(aux);
       }
     }
+  }
 }
