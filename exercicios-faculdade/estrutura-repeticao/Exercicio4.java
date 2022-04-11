@@ -3,8 +3,6 @@ prova de 12 estudantes e mostre na sa´ıda a m´edia das provas. */
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 class Exercicio4 {
   public static void main(String[] args) {
     int nota, counter;
